@@ -33,8 +33,11 @@
 
 #include <android-base/properties.h>
 #include "property_service.h"
-#include "vendor_init.h"
+//#include "vendor_init.h"
 
+
+namespace android {
+namespace init {
 using android::init::property_set;
 
 void property_override(char const prop[], char const value[])
@@ -60,4 +63,6 @@ void vendor_load_properties()
     // fingerprint
     property_override("ro.build.description", "lavender-user 9 PKQ1.180904.001 V11.0.5.0.PFGMIXM release-keys");
     property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ2A.200501.001.B2/6352890:user/release-keys");
+}
+}
 }
