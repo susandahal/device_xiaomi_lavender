@@ -13,7 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Inherit some common PixelExperience stuff
-$(call inherit-product, vendor/stag/main.mk)
+$(call inherit-product, vendor/potato/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_WIFI_EXT := true
 TARGET_INCLUDE_STOCK_ARCORE := true
@@ -22,7 +22,7 @@ TARGET_INCLUDE_STOCK_ARCORE := true
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := stag_lavender
+PRODUCT_NAME := potato_lavender
 PRODUCT_DEVICE := lavender
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7
@@ -33,3 +33,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="lavender"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+PRODUCT_ARCH := arm64
+

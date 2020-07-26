@@ -24,9 +24,8 @@ TARGET_SCREEN_WIDTH := 1080
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-pe
-
-PRODUCT_ENFORCE_RRO_TARGETS := *
+    
+#PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
@@ -39,6 +38,9 @@ PRODUCT_SOONG_NAMESPACES += device/xiaomi/lavender
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+PRODUCT_USES_QCOM_HARDWARE := true
+PRODUCT_BOARD_PLATFORM := sdm660
 
 # Permissions
 PRODUCT_COPY_FILES += \

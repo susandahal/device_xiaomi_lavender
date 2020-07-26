@@ -1,7 +1,7 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/stag_lavender.mk
+    $(LOCAL_DIR)/potato_lavender.mk
 
 COMMON_LUNCH_CHOICES := \
-    stag_lavender-user \
-    stag_lavender-userdebug \
-    stag_lavender-eng
+    potato_lavender-user \
+    potato_lavender-userdebug \
+    potato_lavender-eng
