@@ -11,6 +11,10 @@ $(call inherit-product, vendor/xiaomi/lavender/lavender-vendor.mk)
 
 PRODUCT_CHARACTERISTICS := nosdcard
 
+#QTI Bluetooth
+include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
+$(call inherit-product, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
@@ -97,7 +101,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/listen_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/listen_platform_info.xml \
     $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
     $(LOCAL_PATH)/configs/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
-    $(LOCAL_PATH)/configs/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
+    $(LOCAL_PATH)/configs/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml \
+    $(LOCAL_PATH)/configs/audio/bluetooth_qti_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration_a2dp_offload_disabled_qti.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration_a2dp_offload_disabled.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration_a2dp_offload_disabled.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
@@ -117,7 +124,12 @@ PRODUCT_PACKAGES += \
     libhdmiedid \
     libhfp \
     libldacBT_dec \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+    libbluetooth_qti \
+    liba2dpoffload \
+    com.qualcomm.qti.bluetooth_audio@1.0.vendor \
+    BluetoothQti \
+    vendor.qti.hardware.btconfigstore@1.0.vendor
 
 # Sensor HAL conf file
 PRODUCT_COPY_FILES += \

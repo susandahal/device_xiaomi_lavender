@@ -44,6 +44,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Audio dynamic feature flags
 PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.audio.feature.a2dp_offload.enable=true \
     vendor.audio.feature.afe_proxy.enable=true \
     vendor.audio.feature.anc_headset.enable=true \
     vendor.audio.feature.battery_listener.enable=false \
@@ -88,14 +89,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.qcom.bluetooth.soc=cherokee \
+    persist.bluetooth.bluetooth_audio_hal.disabled=false \
+    persist.vendor.bt.aac_frm_ctl.enabled=true \
     ro.vendor.bluetooth.wipower=false \
-    persist.vendor.service.bdroid.sibs=false
+    vendor.qcom.bluetooth.soc=cherokee
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.bluetooth.a2dp_offload.disabled=false \
-    vendor.bluetooth.soc=cherokee \
-    persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
+    persist.vendor.bt.a2dp.aac_whitelist=false \
+    persist.vendor.qcom.bluetooth.enable.splita2dp=true \
+    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxhd-aac-ldac \
+    ro.bluetooth.library_name=libbluetooth_qti.so \
+    ro.bluetooth.a2dp_offload.supported=true \
+    vendor.audio.feature.a2dp_offload.enable=true \
+    vendor.bluetooth.soc=cherokee
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \

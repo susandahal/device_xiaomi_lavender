@@ -124,6 +124,18 @@ vendor/etc/acdbdata/adsp_avs_config.acdb
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
+# Bluetooth (qti) - from LA.UM.8.2.r1-07400-sdm660.0
+vendor/lib/btaudio_offload_if.so|5b1c1d81aeaa39923b28196c84aa2269d318fcd6
+vendor/lib/hw/audio.bluetooth_qti.default.so|bbf5bed40ab75e0feed0753a40743dbf6979dfb9
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|87df9077916c6b9d4668c2156da165492a393386
+vendor/lib/libbluetooth_audio_session_qti.so|dcd45e11d85eb605b5f516961f88bf8b0a80c0eb
+vendor/lib/libbthost_if.so|efec404bb92b5c70593e1f81a145a9319704684f
+vendor/lib64/btaudio_offload_if.so|f9d7229e818a3044d56739d9d47462c4af726c02
+vendor/lib64/hw/audio.bluetooth_qti.default.so|102539a0013edf06790215b21bed68c704437a96
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|93f09e7ee848e2d6fee7f0810ad8a3e57346b72c
+vendor/lib64/libbluetooth_audio_session_qti.so|c2b100d5fbce3d219515f8c359c6990a08e9fa94
+vendor/lib64/libbthost_if.so|fb4d3f4e17b26ed3459657e799ec75f2d96bf959
+
 # Bluetooth - from LA.UM.8.2.r1-06700-sdm660.0
 lib/libbtconfigstore.so|b2765f77529c6bbad6eafc1e8b358ad9ce20d992
 lib64/libbtconfigstore.so|abbfd1a5e773fba69dccb3121861ef3fec2cdab9
