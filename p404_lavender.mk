@@ -15,6 +15,10 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 
+# Inherit Gapps
+$(call inherit-product, vendor/google/pixel/config.mk)
+$(call inherit-product, vendor/google/gms/gapps.mk)
+
 # Inherit from lavender device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
